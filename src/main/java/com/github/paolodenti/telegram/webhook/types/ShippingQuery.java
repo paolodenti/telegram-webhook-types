@@ -1,18 +1,16 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class ShippingQuery {
-	@JsonProperty("id")
 	private String id;
 
-	@JsonProperty("from")
 	private User from;
 
-	@JsonProperty("invoice_payload")
 	private String invoicePayload;
 
-	@JsonProperty("shipping_address")
 	private ShippingAddress shippingAddress;
 
 	public String getId() {

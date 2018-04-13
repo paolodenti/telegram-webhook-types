@@ -1,24 +1,20 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class ShippingAddress {
-	@JsonProperty("country_code")
 	private String countryCode;
 
-	@JsonProperty("state")
 	private String state;
 
-	@JsonProperty("city")
 	private String city;
 
-	@JsonProperty("street_line1")
 	private String streetLine1;
 
-	@JsonProperty("street_line2")
 	private String streetLine2;
 
-	@JsonProperty("post_code")
 	private String postCode;
 
 	public String getCountryCode() {

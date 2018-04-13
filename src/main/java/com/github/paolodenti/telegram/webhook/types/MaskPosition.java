@@ -1,19 +1,17 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class MaskPosition {
 
-	@JsonProperty("point")
 	private String point;
 
-	@JsonProperty("x_shift")
 	private Double xShift;
 
-	@JsonProperty("y_shift")
 	private Double yShift;
 
-	@JsonProperty("scale")
 	private Double scale;
 
 	public String getPoint() {

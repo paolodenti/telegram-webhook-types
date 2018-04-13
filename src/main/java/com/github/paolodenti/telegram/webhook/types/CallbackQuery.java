@@ -1,27 +1,22 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class CallbackQuery {
-	@JsonProperty("id")
 	private String id;
 
-	@JsonProperty("from")
 	private User from;
 
-	@JsonProperty("message")
 	private Message message;
 
-	@JsonProperty("inline_message_id")
 	private String inlineMessageId;
 
-	@JsonProperty("chat_instance")
 	private String chatInstance;
 
-	@JsonProperty("data")
 	private String data;
 
-	@JsonProperty("game_short_name")
 	private String gameShortName;
 
 	public String getId() {

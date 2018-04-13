@@ -1,18 +1,16 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Venue {
-	@JsonProperty("location")
 	private Location location;
 
-	@JsonProperty("title")
 	private String title;
 
-	@JsonProperty("address")
 	private String address;
 
-	@JsonProperty("foursquare_id")
 	private String foursquareId;
 
 	public Location getLocation() {

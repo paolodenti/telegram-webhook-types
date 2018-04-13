@@ -1,13 +1,13 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class ChatPhoto {
 
-	@JsonProperty("small_file_id")
 	private String smallFileId;
 
-	@JsonProperty("big_file_id")
 	private String bigFileId;
 
 	public String getSmallFileId() {

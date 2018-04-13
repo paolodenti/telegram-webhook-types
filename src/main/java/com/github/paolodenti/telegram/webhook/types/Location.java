@@ -1,12 +1,12 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Location {
-	@JsonProperty("longitude")
 	private Double longitude;
 
-	@JsonProperty("latitude")
 	private Double latitude;
 
 	public Double getLongitude() {

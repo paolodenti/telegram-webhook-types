@@ -1,45 +1,34 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Chat {
-	@JsonProperty("id")
 	private Integer id;
 
-	@JsonProperty("type")
 	private String type;
 
-	@JsonProperty("title")
 	private String title;
 
-	@JsonProperty("username")
 	private String username;
 
-	@JsonProperty("first_name")
 	private String firstName;
 
-	@JsonProperty("last_name")
 	private String lastName;
 
-	@JsonProperty("all_members_are_administrators")
 	private Boolean allMembersAreAdministrators;
 
-	@JsonProperty("photo")
 	private ChatPhoto photo;
 
-	@JsonProperty("description")
 	private String description;
 
-	@JsonProperty("invite_link")
 	private String inviteLink;
 
-	@JsonProperty("pinned_message")
 	private String pinnedMessage;
 
-	@JsonProperty("sticker_set_name")
 	private String stickerSetName;
 
-	@JsonProperty("can_set_sticker_set")
 	private Boolean canSetStickerSet;
 
 	public Integer getId() {

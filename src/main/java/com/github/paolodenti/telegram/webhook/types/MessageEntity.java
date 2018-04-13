@@ -1,21 +1,18 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class MessageEntity {
-	@JsonProperty("type")
 	private String type;
 
-	@JsonProperty("offset")
 	private Integer offset;
 
-	@JsonProperty("length")
 	private Integer length;
 
-	@JsonProperty("url")
 	private String url;
 
-	@JsonProperty("user")
 	private User user;
 
 	public String getType() {

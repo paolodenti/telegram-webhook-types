@@ -2,25 +2,21 @@ package com.github.paolodenti.telegram.webhook.types;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Game {
-	@JsonProperty("title")
 	private String title;
 
-	@JsonProperty("description")
 	private String description;
 
-	@JsonProperty("photo")
 	private List<PhotoSize> photo;
 
-	@JsonProperty("text")
 	private String text;
 
-	@JsonProperty("text_entities")
 	private List<MessageEntity> textEntities;
 
-	@JsonProperty("animation")
 	private Animation animation;
 
 	public String getTitle() {

@@ -1,24 +1,20 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class User {
-	@JsonProperty("id")
 	private Integer id;
 
-	@JsonProperty("is_bot")
 	private Boolean isBot;
 
-	@JsonProperty("first_name")
 	private String firstName;
 
-	@JsonProperty("last_name")
 	private String lastName;
 
-	@JsonProperty("username")
 	private String username;
 
-	@JsonProperty("language_code")
 	private String languageCode;
 
 	public Integer getId() {

@@ -1,27 +1,22 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class PreCheckoutQuery {
-	@JsonProperty("id")
 	private String id;
 
-	@JsonProperty("from")
 	private User from;
 
-	@JsonProperty("currency")
 	private String currency;
 
-	@JsonProperty("total_amount")
 	private Integer totalAmount;
 
-	@JsonProperty("invoice_payload")
 	private String invoicePayload;
 
-	@JsonProperty("shipping_option_id")
 	private String shippingOptionId;
 
-	@JsonProperty("order_info")
 	private OrderInfo orderInfo;
 
 	public String getId() {

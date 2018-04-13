@@ -1,18 +1,16 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Voice {
-	@JsonProperty("file_id")
 	private String fileId;
 
-	@JsonProperty("duration")
 	private Integer duration;
 
-	@JsonProperty("mime_type")
 	private String mimeType;
 
-	@JsonProperty("file_size")
 	private Integer fileSize;
 
 	public String getFileId() {

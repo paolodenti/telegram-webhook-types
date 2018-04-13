@@ -1,21 +1,18 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Invoice {
-	@JsonProperty("title")
 	private String title;
 
-	@JsonProperty("description")
 	private String description;
 
-	@JsonProperty("start_parameter")
 	private String startParameter;
 
-	@JsonProperty("currency")
 	private String currency;
 
-	@JsonProperty("total_amount")
 	private Integer totalAmount;
 
 	public String getTitle() {

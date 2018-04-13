@@ -2,133 +2,93 @@ package com.github.paolodenti.telegram.webhook.types;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class Message {
-	@JsonProperty("message_id")
 	private Integer messageId;
 
-	@JsonProperty("from")
 	private User from;
 
-	@JsonProperty("date")
 	private Integer date;
 
-	@JsonProperty("chat")
 	private Chat chat;
 
-	@JsonProperty("forward_from")
 	private User forwardFrom;
 
-	@JsonProperty("forward_from_chat")
 	private Chat forwardFromChat;
 
-	@JsonProperty("forward_from_message_id")
 	private Integer forwardFromMessageId;
 
-	@JsonProperty("forward_signature")
 	private String forwardSignature;
 
-	@JsonProperty("forward_date")
 	private Integer forwardDate;
 
-	@JsonProperty("reply_to_message")
 	private Message replyToMessage;
 
-	@JsonProperty("edit_date")
 	private Integer editDate;
 
-	@JsonProperty("media_group_id")
 	private String mediaGroupId;
 
-	@JsonProperty("author_signature")
 	private String authorSignature;
 
-	@JsonProperty("text")
 	private String text;
 
-	@JsonProperty("entities")
 	private List<MessageEntity> entities;
 
-	@JsonProperty("caption_entities")
 	private List<MessageEntity> captionEntities;
 
-	@JsonProperty("audio")
 	private Audio audio;
 
-	@JsonProperty("document")
 	private Document document;
 
-	@JsonProperty("game")
 	private Game game;
 
-	@JsonProperty("photo")
 	private List<PhotoSize> photo;
 
-	@JsonProperty("sticker")
 	private Sticker sticker;
 
-	@JsonProperty("video")
 	private Video video;
 
-	@JsonProperty("voice")
 	private Voice voice;
 
-	@JsonProperty("video_note")
 	private VideoNote videoNote;
 
-	@JsonProperty("caption")
 	private String caption;
 
-	@JsonProperty("contact")
 	private Contact contact;
 
-	@JsonProperty("location")
 	private Location location;
 
-	@JsonProperty("venue")
 	private Venue venue;
 
-	@JsonProperty("new_chat_members")
 	private List<User> newChatMembers;
 
-	@JsonProperty("left_chat_member")
 	private User leftChatMember;
 
-	@JsonProperty("new_chat_title")
 	private String newChatTitle;
 
-	@JsonProperty("new_chat_photo")
 	private List<PhotoSize> newChatPhoto;
 
-	@JsonProperty("delete_chat_photo")
 	private Boolean deleteChatPhoto;
 
-	@JsonProperty("group_chat_created")
 	private Boolean groupChatCreated;
 
-	@JsonProperty("supergroup_chat_created")
 	private Boolean supergroupChatCreated;
 
-	@JsonProperty("channel_chat_created")
 	private Boolean channelChatCreated;
 
-	@JsonProperty("migrate_to_chat_id")
 	private Integer migrateToChatId;
 
-	@JsonProperty("migrate_from_chat_id")
 	private Integer migrateFromChatId;
 
-	@JsonProperty("pinned_message")
 	private Message pinnedMessage;
 
-	@JsonProperty("invoice")
 	private Invoice invoice;
 
-	@JsonProperty("successful_payment")
 	private SuccessfulPayment successfulPayment;
 
-	@JsonProperty("connected_website")
 	private String connectedWebsite;
 
 	public Integer getMessageId() {

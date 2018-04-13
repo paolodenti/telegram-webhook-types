@@ -1,21 +1,18 @@
 package com.github.paolodenti.telegram.webhook.types;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class InlineQuery {
-	@JsonProperty("id")
 	private String id;
 
-	@JsonProperty("from")
 	private User from;
 
-	@JsonProperty("location")
 	private Location location;
 
-	@JsonProperty("query")
 	private String query;
 
-	@JsonProperty("offset")
 	private String offset;
 
 	public String getId() {
