@@ -1,0 +1,1 @@
+# Telegram Webhook JSON data types - Java Mappings through Jackson Databind
